@@ -1,6 +1,6 @@
 # factory.brooswit.nexus and blog.brooswit.nexus: spec
 
-Written at handover (2026-09-29). Everything below is already live (website v0.1.6, blog v0.1.1); keep it true and use it as the acceptance list for future changes. Brooswit reviews wording and visuals.
+Written at handover (2026-09-29). Everything below is already live (website v0.1.10, blog v0.1.2); keep it true and use it as the acceptance list for future changes. Brooswit reviews wording and visuals.
 
 ## factory.brooswit.nexus (repo `website`)
 
@@ -8,7 +8,7 @@ Top to bottom, all full viewport width, no gaps or side margins:
 
 1. Factory logo (`assets/factory-logo.png`, 1600px wide), full width, at the very top.
 2. Header banner (`assets/factoryheader.jpg`, 1600px), full width.
-   Directly under it, a title line: `h1` "Brooswit Factory", centered, gold `#d9a441`, Uncial Antiqua at large size (`clamp(2.4rem,8vw,5.5rem)`), visible on first load. It is inside `#top` (with the logo and banner), so it hides with them when a product is selected.
+   Directly under it, a title line: `h1` "Brooswit Factory", centered, gold `#d9a441`, Cinzel Decorative 700 at large size (`clamp(1.8rem,7vw,5rem)`), visible on first load. It is inside `#top` (with the logo and banner), so it hides with them when a product is selected.
 3. Product row: drovr, butchr, cleavr in three equal columns (`assets/*-logo.png`, 640px, square). Stack on phones (max-width 600px).
 4. Info area below the row, only when a product is selected. Nothing else below.
 
@@ -30,13 +30,13 @@ Info area:
   - cleavr: Chrome extension that slides a butchr agent panel in from the side of the page with a live terminal. PRIVATE repo: no links; the text says "Not publicly available yet." Do not change this until Brooswit decides how Cleavr is distributed.
 - Without JS: a `<noscript>` line links the drovr and butchr repos.
 
-Type and palette: Uncial Antiqua 400 (headings and title: every `h1`/`h2`) and IM Fell English 400 (body), used on all visible text, SIL OFL, self-hosted latin woff2 in `fonts/` with `OFL-*.txt` licenses; dark palette (`--bg:#0d0b09`, panel `#16110d`, text `#eadfc4`, gold `#d9a441`, `#7a5a1e`, links `#f0c56a`). Must work at 390px width with no horizontal scroll.
+Type and palette: Cinzel Decorative 700 (headings and title: every `h1`/`h2`) and IM Fell English 400 (body), used on all visible text, SIL OFL, self-hosted latin woff2 in `fonts/` with `OFL-*.txt` licenses; dark palette (`--bg:#0d0b09`, panel `#16110d`, text `#eadfc4`, gold `#d9a441`, `#7a5a1e`, links `#f0c56a`). Must work at 390px width with no horizontal scroll.
 
 Files: `CNAME` (factory.brooswit.nexus), `.nojekyll`, `index.html`, `assets/`, `fonts/`, `CHANGELOG.md`, `package.json`, `.github/workflows/ci.yml` (semver/changelog gate).
 
 ## blog.brooswit.nexus (repo `blog`)
 
-One static `index.html`: full-width blog image (`assets/blog.jpg`, from `~/Downloads/blog.png`, 1600px JPEG under 500 KB), then "Coming soon" (`h1`, Uncial Antiqua, gold) and one body line (IM Fell English) linking the factory homepage, same fonts and palette as the website. Nothing else until Brooswit asks.
+One static `index.html`: full-width blog image (`assets/blog.jpg`, from `~/Downloads/blog.png`, 1600px JPEG under 500 KB), then an `h1` "Under construction" and an `h2` "Pardon our mess." (Cinzel Decorative, gold) and one body line (IM Fell English) linking the factory homepage, same fonts and palette as the website. Nothing else until Brooswit asks.
 
 ## Verify after every deploy
 

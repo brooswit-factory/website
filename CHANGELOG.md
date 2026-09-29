@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.10
+
+### Changed
+
+- FACTORY-542: all headings (the title line and the three tagline headings) use Cinzel Decorative 700 instead of Uncial Antiqua, which was hard to read (`t` looked like `c`). Uncial Antiqua removed (woff2, `@font-face`, preload, licence). Body stays IM Fell English. Heading sizes reduced a little because Cinzel Decorative is wide. `docs/site-spec.md` updated.
+
 ## 0.1.9
 
 ### Changed
