@@ -12,16 +12,53 @@
   img { display:block; width:100%; height:auto; }
   .tools { display:grid; grid-template-columns:repeat(3,1fr); }
   @media (max-width:600px) { .tools { grid-template-columns:1fr; } }
-  .tools a { display:block; }
+  .tools button { display:block; padding:0; margin:0; border:0; background:none; cursor:pointer; }
+  .tools button:focus-visible { outline:4px solid var(--link); outline-offset:-4px; }
+  .tools button[aria-expanded="true"] { box-shadow:inset 0 -8px 0 var(--link); }
+  #info { max-width:720px; margin:0 auto; padding:0 16px; text-align:left; }
+  #info section { padding:24px 0 48px; }
+  #info h2 { margin:0 0 8px; }
+  #info a { color:var(--link); }
 </style>
 </head>
 <body>
 <img src="assets/factory-logo.png" alt="Brooswit's Factory logo">
 <img src="assets/factoryheader.jpg" alt="Brooswit Factory">
 <nav class="tools" aria-label="Factory tools">
-  <a href="https://github.com/brooswit-factory/drovr"><img src="assets/drovr-logo.png" alt="drovr"></a>
-  <a href="https://github.com/brooswit-factory/butchr"><img src="assets/butchr-logo.png" alt="butchr"></a>
-  <a href="https://github.com/brooswit-factory/cleavr"><img src="assets/cleavr-logo.png" alt="cleavr"></a>
+  <button type="button" aria-expanded="false" aria-controls="drovr"><img src="assets/drovr-logo.png" alt="drovr"></button>
+  <button type="button" aria-expanded="false" aria-controls="butchr"><img src="assets/butchr-logo.png" alt="butchr"></button>
+  <button type="button" aria-expanded="false" aria-controls="cleavr"><img src="assets/cleavr-logo.png" alt="cleavr"></button>
 </nav>
+<div id="info">
+  <section id="drovr" hidden>
+    <h2>drovr</h2>
+    <p>A library that wraps the herdr SDK for the factory. It catches situations where an agent is blocked but herdr doesn't report it, and corrects herdr's reporting where it is wrong, so tools like butchr don't each have to work around the same problems.</p>
+    <p><a href="https://github.com/brooswit-factory/drovr">drovr on GitHub</a></p>
+  </section>
+  <section id="butchr" hidden>
+    <h2>butchr</h2>
+    <p>The software factory daemon. It watches your Jira, runs one AI agent per matching ticket, and pushes ticket changes to those agents as they happen. A live view lists the active agents and opens a terminal on any of them.</p>
+    <p><a href="https://github.com/brooswit-factory/butchr">butchr on GitHub</a></p>
+  </section>
+  <section id="cleavr" hidden>
+    <h2>cleavr</h2>
+    <p>A Chrome extension that slides a butchr agent panel in from the side of the page you're on, with a live terminal for that page's agent. It's for people already running butchr who want to talk to an agent without leaving the page.</p>
+    <p>Not publicly available yet.</p>
+  </section>
+  <noscript><p><a href="https://github.com/brooswit-factory/drovr">drovr</a> · <a href="https://github.com/brooswit-factory/butchr">butchr</a></p></noscript>
+</div>
+<script>
+  const buttons = document.querySelectorAll('.tools button');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      const open = b.getAttribute('aria-expanded') === 'true';
+      buttons.forEach(function (o) {
+        const show = o === b && !open;
+        o.setAttribute('aria-expanded', String(show));
+        document.getElementById(o.getAttribute('aria-controls')).hidden = !show;
+      });
+    });
+  });
+</script>
 </body>
 </html>
