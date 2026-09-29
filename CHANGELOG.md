@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.6
+
+### Changed
+
+- FACTORY-539: selecting a product hides the factory logo and header banner, so the product logos sit at the top with the info section below. Clicking the selected product again deselects it: all logos dim, the header and factory logo return, the info section closes. The page scrolls to the top on either change so the layout doesn't jump.
+
 ## 0.1.5
 
 ### Fixed
