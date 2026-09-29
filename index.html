@@ -12,9 +12,13 @@
   img { display:block; width:100%; height:auto; }
   .tools { display:grid; grid-template-columns:repeat(3,1fr); }
   @media (max-width:600px) { .tools { grid-template-columns:1fr; } }
-  .tools button { display:block; padding:0; margin:0; border:0; background:none; cursor:pointer; }
+  .tools button { position:relative; display:block; padding:0; margin:0; border:0; background:none; cursor:pointer; }
+  .tools button img { filter:brightness(.45); transition:filter .15s; }
   .tools button:focus-visible { outline:4px solid var(--link); outline-offset:-4px; }
-  .tools button[aria-expanded="true"] { box-shadow:inset 0 -8px 0 var(--link); }
+  .tools button:focus-visible img, .tools button[aria-expanded="true"] img { filter:none; }
+  @media (hover:hover) { .tools button:hover img { filter:none; } }
+  .tools button::after { content:""; position:absolute; inset:0; background:url(assets/selected.png) center/100% 100% no-repeat; pointer-events:none; opacity:0; }
+  .tools button[aria-expanded="true"]::after { opacity:1; }
   #info { max-width:720px; margin:0 auto; padding:0 16px; text-align:left; }
   #info section { padding:24px 0 48px; }
   #info h2 { margin:0 0 8px; }
