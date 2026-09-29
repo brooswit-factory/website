@@ -15,8 +15,8 @@ Product logos (buttons, `aria-expanded`, keyboard operable):
 
 - Dim at first (`filter: brightness(.45)`); full brightness on hover (only where `(hover:hover)`) and on keyboard focus. On touch, the selected logo is the only bright one.
 - Click selects: `assets/selected.png` overlays that logo (`::after`, pointer-events off, same box as the logo: `position:absolute; inset:0; width:100%; height:100%`, image stretched with `background-size:100% 100%`), the logo stays bright, and its info section shows below. One selected at a time; selecting another moves the overlay and dims the first.
-- Clicking the selected logo again deselects: all dim, overlay gone, info closed.
-- While any product is selected, the factory logo and header banner are hidden (`body.has-selection #top {display:none}`) so the product row is at the top; the page scrolls to the top on every change so the layout does not jump. Deselecting restores them.
+- Clicking the selected logo again does nothing: selection changes only when a different product is clicked, and nothing is ever unselected by a click (a page reload returns to the start state). `aria-expanded` stays correct.
+- While any product is selected, the factory logo and header banner are hidden (`body.has-selection #top {display:none}`) so the product row is at the top; the page scrolls to the top on every change of selection (not on a repeat click) so the layout does not jump. They stay hidden until the page is reloaded.
 - Start with nothing selected.
 
 Info area:

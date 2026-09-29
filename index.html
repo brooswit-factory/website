@@ -63,13 +63,13 @@
   const buttons = document.querySelectorAll('.tools button');
   buttons.forEach(function (b) {
     b.addEventListener('click', function () {
-      const open = b.getAttribute('aria-expanded') === 'true';
+      if (b.getAttribute('aria-expanded') === 'true') return;
       buttons.forEach(function (o) {
-        const show = o === b && !open;
+        const show = o === b;
         o.setAttribute('aria-expanded', String(show));
         document.getElementById(o.getAttribute('aria-controls')).hidden = !show;
       });
-      document.body.classList.toggle('has-selection', !open);
+      document.body.classList.add('has-selection');
       window.scrollTo(0, 0);
     });
   });
