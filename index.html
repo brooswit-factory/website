@@ -16,12 +16,12 @@
   img { display:block; width:100%; height:auto; }
   .tools { display:grid; grid-template-columns:repeat(3,1fr); }
   @media (max-width:600px) { .tools { grid-template-columns:1fr; } }
-  .tools button { position:relative; display:block; padding:0; margin:0; border:0; background:none; cursor:pointer; }
+  .tools button { position:relative; display:block; width:100%; min-width:0; box-sizing:border-box; padding:0; margin:0; border:0; background:none; cursor:pointer; }
   .tools button img { filter:brightness(.45); transition:filter .15s; }
   .tools button:focus-visible { outline:4px solid var(--link); outline-offset:-4px; }
   .tools button:focus-visible img, .tools button[aria-expanded="true"] img { filter:none; }
   @media (hover:hover) { .tools button:hover img { filter:none; } }
-  .tools button::after { content:""; position:absolute; inset:0; background:url(assets/selected.png) center/100% 100% no-repeat; pointer-events:none; opacity:0; }
+  .tools button::after { content:""; position:absolute; inset:0; width:100%; height:100%; background:url(assets/selected.png) 0 0/100% 100% no-repeat; pointer-events:none; opacity:0; }
   .tools button[aria-expanded="true"]::after { opacity:1; }
   #info { background:var(--panel); border-left:clamp(14px,3vw,36px) double var(--gold); border-right:clamp(14px,3vw,36px) double var(--gold); box-shadow:inset clamp(6px,1.5vw,16px) 0 0 var(--gold-dark), inset calc(-1 * clamp(6px,1.5vw,16px)) 0 0 var(--gold-dark); }
   #info section { max-width:64rem; margin:0 auto; padding:clamp(24px,5vw,64px) clamp(28px,6vw,80px); }

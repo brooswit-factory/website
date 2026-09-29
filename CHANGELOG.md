@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.5
+
+### Fixed
+
+- FACTORY-539: the selected overlay always covers exactly its logo. The logo buttons are now explicitly full width of their grid cell (not content-sized, which some browsers do for buttons), and the overlay is pinned to 100% width and height of the button with the image stretched to fit.
+
 ## 0.1.4
 
 ### Changed
