@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4
+
+### Changed
+
+- FACTORY-539: dark-fantasy type and palette. Cinzel (headings) and EB Garamond (body), both SIL OFL, self-hosted as latin woff2 in `fonts/` with their licenses (no third-party font requests). The info sections are full width with much larger text and a gold double border down the left and right edges; the page background is dark to match. Works at phone widths.
+
 ## 0.1.3
 
 ### Changed

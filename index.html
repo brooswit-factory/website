@@ -3,12 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="fonts/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Brooswit Factory</title>
 <meta name="description" content="Brooswit Factory: butchr, cleavr and drovr.">
 <style>
-  :root { color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --muted:#555; --link:#0b5fd6; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#111; --fg:#eee; --muted:#aaa; --link:#7db1ff; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui,sans-serif; text-align:center; }
+  @font-face { font-family:"Cinzel"; font-weight:700; font-display:swap; src:url(fonts/cinzel-latin-700-normal.woff2) format("woff2"); }
+  @font-face { font-family:"EB Garamond"; font-weight:400; font-display:swap; src:url(fonts/eb-garamond-latin-400-normal.woff2) format("woff2"); }
+  @font-face { font-family:"EB Garamond"; font-weight:600; font-display:swap; src:url(fonts/eb-garamond-latin-600-normal.woff2) format("woff2"); }
+  :root { color-scheme: dark; --bg:#0d0b09; --panel:#16110d; --fg:#eadfc4; --gold:#d9a441; --gold-dark:#7a5a1e; --link:#f0c56a; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:400 1.35rem/1.65 "EB Garamond",Georgia,serif; }
   img { display:block; width:100%; height:auto; }
   .tools { display:grid; grid-template-columns:repeat(3,1fr); }
   @media (max-width:600px) { .tools { grid-template-columns:1fr; } }
@@ -19,9 +23,10 @@
   @media (hover:hover) { .tools button:hover img { filter:none; } }
   .tools button::after { content:""; position:absolute; inset:0; background:url(assets/selected.png) center/100% 100% no-repeat; pointer-events:none; opacity:0; }
   .tools button[aria-expanded="true"]::after { opacity:1; }
-  #info { max-width:720px; margin:0 auto; padding:0 16px; text-align:left; }
-  #info section { padding:24px 0 48px; }
-  #info h2 { margin:0 0 8px; }
+  #info { background:var(--panel); border-left:clamp(14px,3vw,36px) double var(--gold); border-right:clamp(14px,3vw,36px) double var(--gold); box-shadow:inset clamp(6px,1.5vw,16px) 0 0 var(--gold-dark), inset calc(-1 * clamp(6px,1.5vw,16px)) 0 0 var(--gold-dark); }
+  #info section { max-width:64rem; margin:0 auto; padding:clamp(24px,5vw,64px) clamp(28px,6vw,80px); }
+  #info h2 { margin:0 0 .4em; font:700 clamp(2rem,5vw,3.4rem)/1.15 "Cinzel",Georgia,serif; color:var(--gold); letter-spacing:.04em; }
+  #info p { margin:0 0 1em; font-size:clamp(1.25rem,2.6vw,1.6rem); }
   #info a { color:var(--link); }
 </style>
 </head>
