@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.8
+
+### Changed
+
+- FACTORY-542: clicking the already-selected product logo now does nothing. The selection changes only when a different product is clicked, so once a product is selected the factory logo and header stay hidden, the overlay stays on it and its info section stays open (reload to return to the start). `aria-expanded` stays correct and the page scrolls to the top only when the selection changes. Replaces the click-again-to-deselect behaviour from 0.1.6. `docs/site-spec.md` updated.
+
 ## 0.1.7
 
 ### Added
