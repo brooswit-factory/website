@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Version and changelog agree
+        run: |
+          v=$(node -p "require('./package.json').version")
+          grep -q "^## $v\$" CHANGELOG.md || { echo "CHANGELOG.md has no '## $v' entry"; exit 1; }
+      - name: Version bumped on PRs
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          old=$(git show "origin/${{ github.base_ref }}:package.json" 2>/dev/null | node -p "JSON.parse(require('fs').readFileSync(0,'utf8')).version" || echo none)
+          new=$(node -p "require('./package.json').version")
+          [ "$old" != "$new" ] || { echo "version $new was not bumped"; exit 1; }
+      - name: Page files present
+        run: test -f index.html && test -f CNAME
