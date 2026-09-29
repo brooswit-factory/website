@@ -29,6 +29,11 @@
   #info h2 { margin:0 0 .4em; font:700 clamp(1.5rem,4.2vw,3rem)/1.25 "Cinzel Decorative",Georgia,serif; color:var(--gold); letter-spacing:.04em; text-wrap:balance; overflow-wrap:break-word; }
   #info p { margin:0 0 1em; font-size:clamp(1.25rem,2.6vw,1.6rem); }
   #info a { color:var(--link); }
+  #info ul { margin:0 0 1em; padding-left:1.4em; font-size:clamp(1.25rem,2.6vw,1.6rem); }
+  #info li { margin:0 0 .5em; }
+  #info li::marker { color:var(--gold); }
+  #info a.repo { display:inline-flex; align-items:center; gap:.6em; padding:4px 0; }
+  #info a.repo img { width:48px; height:48px; flex:none; }
 </style>
 </head>
 <body>
@@ -45,13 +50,18 @@
 <div id="info">
   <section id="drovr" aria-label="drovr" hidden>
     <h2>Ever onward...</h2>
-    <p>A library that wraps the herdr SDK for the factory. It catches situations where an agent is blocked but herdr doesn't report it, and corrects herdr's reporting where it is wrong, so tools like butchr don't each have to work around the same problems.</p>
-    <p><a href="https://github.com/brooswit-factory/drovr">drovr on GitHub</a></p>
+    <p>A harness that wraps <a href="https://herdr.dev">Herdr</a></p>
+    <ul>
+      <li>Automatically handles dialogs so your agents are never blocked.</li>
+      <li>Automatically handles development/experimental options to unlock all capabilities</li>
+      <li>Monitors for scenarios where agents get blocked, but Herdr doesn't catch it.</li>
+    </ul>
+    <p><a class="repo" href="https://github.com/brooswit-factory/drovr"><img src="assets/drovr-icon.png" alt="" width="48" height="48">drovr on GitHub</a></p>
   </section>
   <section id="butchr" aria-label="butchr" hidden>
     <h2>It's a messy job, but someone's gotta do it...</h2>
     <p>The software factory daemon. It watches your Jira, runs one AI agent per matching ticket, and pushes ticket changes to those agents as they happen. A live view lists the active agents and opens a terminal on any of them.</p>
-    <p><a href="https://github.com/brooswit-factory/butchr">butchr on GitHub</a></p>
+    <p><a class="repo" href="https://github.com/brooswit-factory/butchr"><img src="assets/butchr-icon.png" alt="" width="48" height="48">butchr on GitHub</a></p>
   </section>
   <section id="cleavr" aria-label="cleavr" hidden>
     <h2>Now you're the butcher...</h2>
