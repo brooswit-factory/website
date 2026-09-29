@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.13
+
+### Changed
+
+- FACTORY-547: removed the visible "Brooswit Factory" title line under the header banner. The `h1` stays inside `#top` as a screen-reader-only element (1px, clipped) so the page keeps its heading; nothing visible is left in its place and the product logos follow the banner with no gap. `docs/site-spec.md` updated.
+
 ## 0.1.12
 
 ### Changed

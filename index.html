@@ -23,7 +23,7 @@
   @media (hover:hover) { .tools button:hover img { filter:none; } }
   .tools button::after { content:""; position:absolute; inset:0; width:100%; height:100%; background:url(assets/selected.png) 0 0/100% 100% no-repeat; pointer-events:none; opacity:0; }
   .tools button[aria-expanded="true"]::after { opacity:1; }
-  #top h1 { margin:0; padding:.5em .5em .6em; text-align:center; font:700 clamp(1.8rem,7vw,5rem)/1.15 "Cinzel Decorative",Georgia,serif; color:var(--gold); letter-spacing:.03em; }
+  #top h1 { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); clip-path:inset(50%); white-space:nowrap; border:0; }
   #info { background:var(--panel); border-left:clamp(14px,3vw,36px) double var(--gold); border-right:clamp(14px,3vw,36px) double var(--gold); box-shadow:inset clamp(6px,1.5vw,16px) 0 0 var(--gold-dark), inset calc(-1 * clamp(6px,1.5vw,16px)) 0 0 var(--gold-dark); }
   #info section { max-width:64rem; margin:0 auto; padding:clamp(24px,5vw,64px) clamp(28px,6vw,80px); }
   #info h2 { margin:0 0 .4em; font:700 clamp(1.5rem,4.2vw,3rem)/1.25 "Cinzel Decorative",Georgia,serif; color:var(--gold); letter-spacing:.04em; text-wrap:balance; overflow-wrap:break-word; }

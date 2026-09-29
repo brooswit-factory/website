@@ -8,8 +8,8 @@ Top to bottom, all full viewport width, no gaps or side margins:
 
 1. Factory logo (`assets/factory-logo.png`, 1600px wide), full width, at the very top.
 2. Header banner (`assets/factoryheader.jpg`, 1600px), full width.
-   Directly under it, a title line: `h1` "Brooswit Factory", centered, gold `#d9a441`, Cinzel Decorative 700 at large size (`clamp(1.8rem,7vw,5rem)`), visible on first load. It is inside `#top` (with the logo and banner), so it hides with them when a product is selected.
-3. Product row: drovr, butchr, cleavr in three equal columns (`assets/*-logo.png`, 640px, square). Stack on phones (max-width 600px).
+   No visible text under it: the `h1` "Brooswit Factory" is kept inside `#top` as a screen-reader-only element (1px, clipped, not `display:none`), so it hides with the header when a product is selected and leaves no gap or band under the banner.
+3. Product row (directly after the banner, 0px gap): drovr, butchr, cleavr in three equal columns (`assets/*-logo.png`, 640px, square). Stack on phones (max-width 600px).
 4. Info area below the row, only when a product is selected. Nothing else below.
 
 Product logos (buttons, `aria-expanded`, keyboard operable):
