@@ -24,7 +24,7 @@ Info area:
 
 - Full viewport width, dark panel, with a decorative gold double border down the left and right edges (CSS border plus inset shadow, not an image).
 - Text column max 64rem, centered, padded inside; body 1.25 to 1.6rem, headings up to 3.4rem, line height 1.65.
-- Content per product (Brooswit reviews the wording; keep it 2 to 4 lines). Each section has `aria-label="<product>"` and its `h2` is the tagline, exactly: drovr "Ever onward...", butchr "It's a message job, but someone's gotta do it...", cleavr "Now you're the butcher..." (three dots, straight apostrophes; wraps balanced, no overflow at 390px).
+- Content per product (Brooswit reviews the wording; keep it 2 to 4 lines). Each section has `aria-label="<product>"` and its `h2` is the tagline, exactly: drovr "Ever onward...", butchr "It's a messy job, but someone's gotta do it...", cleavr "Now you're the butcher..." (three dots, straight apostrophes; wraps balanced, no overflow at 390px).
   - drovr: library wrapping the herdr SDK; catches blocked-agent situations herdr misses and corrects herdr's reporting. Link: https://github.com/brooswit-factory/drovr
   - butchr: the software factory daemon; watches Jira, runs one AI agent per matching ticket, pushes ticket changes to agents, live view with a terminal per agent. Link: https://github.com/brooswit-factory/butchr
   - cleavr: Chrome extension that slides a butchr agent panel in from the side of the page with a live terminal. PRIVATE repo: no links; the text says "Not publicly available yet." Do not change this until Brooswit decides how Cleavr is distributed.
