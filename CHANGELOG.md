@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.7
+
+### Added
+
+- FACTORY-541: `docs/agent-brief.md` (role and rules for agent-webdev) and `docs/site-spec.md` (current behavior of the site and blog as the acceptance list). No site change.
+
 ## 0.1.6
 
 ### Changed
