@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" href="fonts/cinzel-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/uncial-antiqua-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/im-fell-english-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Brooswit Factory</title>
 <meta name="description" content="Brooswit Factory: butchr, cleavr and drovr.">
 <style>
-  @font-face { font-family:"Cinzel"; font-weight:700; font-display:swap; src:url(fonts/cinzel-latin-700-normal.woff2) format("woff2"); }
-  @font-face { font-family:"EB Garamond"; font-weight:400; font-display:swap; src:url(fonts/eb-garamond-latin-400-normal.woff2) format("woff2"); }
-  @font-face { font-family:"EB Garamond"; font-weight:600; font-display:swap; src:url(fonts/eb-garamond-latin-600-normal.woff2) format("woff2"); }
+  @font-face { font-family:"Uncial Antiqua"; font-weight:400; font-display:swap; src:url(fonts/uncial-antiqua-latin-400-normal.woff2) format("woff2"); }
+  @font-face { font-family:"IM Fell English"; font-weight:400; font-display:swap; src:url(fonts/im-fell-english-latin-400-normal.woff2) format("woff2"); }
   :root { color-scheme: dark; --bg:#0d0b09; --panel:#16110d; --fg:#eadfc4; --gold:#d9a441; --gold-dark:#7a5a1e; --link:#f0c56a; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:400 1.35rem/1.65 "EB Garamond",Georgia,serif; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:400 1.4rem/1.7 "IM Fell English",Georgia,serif; }
   img { display:block; width:100%; height:auto; }
   body.has-selection #top { display:none; }
   .tools { display:grid; grid-template-columns:repeat(3,1fr); }
@@ -24,9 +23,10 @@
   @media (hover:hover) { .tools button:hover img { filter:none; } }
   .tools button::after { content:""; position:absolute; inset:0; width:100%; height:100%; background:url(assets/selected.png) 0 0/100% 100% no-repeat; pointer-events:none; opacity:0; }
   .tools button[aria-expanded="true"]::after { opacity:1; }
+  #top h1 { margin:0; padding:.5em .5em .6em; text-align:center; font:400 clamp(2.4rem,8vw,5.5rem)/1.15 "Uncial Antiqua",Georgia,serif; color:var(--gold); letter-spacing:.03em; }
   #info { background:var(--panel); border-left:clamp(14px,3vw,36px) double var(--gold); border-right:clamp(14px,3vw,36px) double var(--gold); box-shadow:inset clamp(6px,1.5vw,16px) 0 0 var(--gold-dark), inset calc(-1 * clamp(6px,1.5vw,16px)) 0 0 var(--gold-dark); }
   #info section { max-width:64rem; margin:0 auto; padding:clamp(24px,5vw,64px) clamp(28px,6vw,80px); }
-  #info h2 { margin:0 0 .4em; font:700 clamp(2rem,5vw,3.4rem)/1.15 "Cinzel",Georgia,serif; color:var(--gold); letter-spacing:.04em; }
+  #info h2 { margin:0 0 .4em; font:400 clamp(2rem,5vw,3.4rem)/1.2 "Uncial Antiqua",Georgia,serif; color:var(--gold); letter-spacing:.04em; }
   #info p { margin:0 0 1em; font-size:clamp(1.25rem,2.6vw,1.6rem); }
   #info a { color:var(--link); }
 </style>
@@ -35,6 +35,7 @@
 <header id="top">
   <img src="assets/factory-logo.png" alt="Brooswit's Factory logo">
   <img src="assets/factoryheader.jpg" alt="Brooswit Factory">
+  <h1>Brooswit Factory</h1>
 </header>
 <nav class="tools" aria-label="Factory tools">
   <button type="button" aria-expanded="false" aria-controls="drovr"><img src="assets/drovr-logo.png" alt="drovr"></button>
