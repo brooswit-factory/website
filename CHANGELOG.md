@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+### Changed
+
+- FACTORY-539: homepage order. The factory logo moves to the very top (full width), then the header banner (full width), then the drovr, butchr and cleavr logos in three equal columns. The tagline and the Cleavr releases link below the logos are removed; the logos still link to the three repos.
+
 ## 0.1.1
 
 ### Changed
