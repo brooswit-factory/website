@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.11
+
+### Fixed
+
+- FACTORY-543: the butchr tagline now reads "It's a messy job, but someone's gotta do it..." (the copy said "message", a typo). `docs/site-spec.md` updated.
+
 ## 0.1.10
 
 ### Changed
