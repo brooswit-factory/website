@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.12
+
+### Changed
+
+- FACTORY-545: the drovr section uses Brooswit's exact wording: "A harness that wraps Herdr" (Herdr links to https://herdr.dev) followed by a bulleted list of three items. The drovr and butchr "on GitHub" links now show the product icon (48px, decorative, 96px PNG8 files of about 4 KB) next to the text. Cleavr is unchanged ("Not publicly available yet."). `docs/site-spec.md` updated.
+
 ## 0.1.11
 
 ### Fixed
