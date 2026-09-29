@@ -14,6 +14,7 @@
   :root { color-scheme: dark; --bg:#0d0b09; --panel:#16110d; --fg:#eadfc4; --gold:#d9a441; --gold-dark:#7a5a1e; --link:#f0c56a; }
   body { margin:0; background:var(--bg); color:var(--fg); font:400 1.35rem/1.65 "EB Garamond",Georgia,serif; }
   img { display:block; width:100%; height:auto; }
+  body.has-selection #top { display:none; }
   .tools { display:grid; grid-template-columns:repeat(3,1fr); }
   @media (max-width:600px) { .tools { grid-template-columns:1fr; } }
   .tools button { position:relative; display:block; width:100%; min-width:0; box-sizing:border-box; padding:0; margin:0; border:0; background:none; cursor:pointer; }
@@ -31,8 +32,10 @@
 </style>
 </head>
 <body>
-<img src="assets/factory-logo.png" alt="Brooswit's Factory logo">
-<img src="assets/factoryheader.jpg" alt="Brooswit Factory">
+<header id="top">
+  <img src="assets/factory-logo.png" alt="Brooswit's Factory logo">
+  <img src="assets/factoryheader.jpg" alt="Brooswit Factory">
+</header>
 <nav class="tools" aria-label="Factory tools">
   <button type="button" aria-expanded="false" aria-controls="drovr"><img src="assets/drovr-logo.png" alt="drovr"></button>
   <button type="button" aria-expanded="false" aria-controls="butchr"><img src="assets/butchr-logo.png" alt="butchr"></button>
@@ -66,6 +69,8 @@
         o.setAttribute('aria-expanded', String(show));
         document.getElementById(o.getAttribute('aria-controls')).hidden = !show;
       });
+      document.body.classList.toggle('has-selection', !open);
+      window.scrollTo(0, 0);
     });
   });
 </script>
