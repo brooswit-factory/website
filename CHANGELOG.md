@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+### Changed
+
+- FACTORY-539: product logos start dimmed and brighten on hover or keyboard focus. Clicking one overlays `assets/selected.png` on it (pointer events off) and keeps it bright until another is selected; the overlay and brightness move with the selection. On touch devices there is no hover, so the selected logo is the only bright one. The factory logo and header are unchanged. `aria-expanded` is kept on the buttons.
+
 ## 0.1.2
 
 ### Changed
