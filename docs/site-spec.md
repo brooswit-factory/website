@@ -8,6 +8,7 @@ Top to bottom, all full viewport width, no gaps or side margins:
 
 1. Factory logo (`assets/factory-logo.png`, 1600px wide), full width, at the very top.
 2. Header banner (`assets/factoryheader.jpg`, 1600px), full width.
+   Directly under it, a title line: `h1` "Brooswit Factory", centered, gold `#d9a441`, Uncial Antiqua at large size (`clamp(2.4rem,8vw,5.5rem)`), visible on first load. It is inside `#top` (with the logo and banner), so it hides with them when a product is selected.
 3. Product row: drovr, butchr, cleavr in three equal columns (`assets/*-logo.png`, 640px, square). Stack on phones (max-width 600px).
 4. Info area below the row, only when a product is selected. Nothing else below.
 
@@ -23,19 +24,19 @@ Info area:
 
 - Full viewport width, dark panel, with a decorative gold double border down the left and right edges (CSS border plus inset shadow, not an image).
 - Text column max 64rem, centered, padded inside; body 1.25 to 1.6rem, headings up to 3.4rem, line height 1.65.
-- Content per product (Brooswit reviews the wording; keep it 2 to 4 lines):
+- Content per product (Brooswit reviews the wording; keep it 2 to 4 lines). Each section has `aria-label="<product>"` and its `h2` is the tagline, exactly: drovr "Ever onward...", butchr "It's a message job, but someone's gotta do it...", cleavr "Now you're the butcher..." (three dots, straight apostrophes; wraps balanced, no overflow at 390px).
   - drovr: library wrapping the herdr SDK; catches blocked-agent situations herdr misses and corrects herdr's reporting. Link: https://github.com/brooswit-factory/drovr
   - butchr: the software factory daemon; watches Jira, runs one AI agent per matching ticket, pushes ticket changes to agents, live view with a terminal per agent. Link: https://github.com/brooswit-factory/butchr
   - cleavr: Chrome extension that slides a butchr agent panel in from the side of the page with a live terminal. PRIVATE repo: no links; the text says "Not publicly available yet." Do not change this until Brooswit decides how Cleavr is distributed.
 - Without JS: a `<noscript>` line links the drovr and butchr repos.
 
-Type and palette: Cinzel 700 (headings) and EB Garamond 400/600 (body), SIL OFL, self-hosted latin woff2 in `fonts/` with `OFL-*.txt` licenses; dark palette (`--bg:#0d0b09`, panel `#16110d`, text `#eadfc4`, gold `#d9a441`, `#7a5a1e`, links `#f0c56a`). Must work at 390px width with no horizontal scroll.
+Type and palette: Uncial Antiqua 400 (headings and title: every `h1`/`h2`) and IM Fell English 400 (body), used on all visible text, SIL OFL, self-hosted latin woff2 in `fonts/` with `OFL-*.txt` licenses; dark palette (`--bg:#0d0b09`, panel `#16110d`, text `#eadfc4`, gold `#d9a441`, `#7a5a1e`, links `#f0c56a`). Must work at 390px width with no horizontal scroll.
 
 Files: `CNAME` (factory.brooswit.nexus), `.nojekyll`, `index.html`, `assets/`, `fonts/`, `CHANGELOG.md`, `package.json`, `.github/workflows/ci.yml` (semver/changelog gate).
 
 ## blog.brooswit.nexus (repo `blog`)
 
-One static `index.html`: full-width blog image (`assets/blog.jpg`, from `~/Downloads/blog.png`, 1600px JPEG under 500 KB), then "Coming soon" (Cinzel, gold) and one line linking the factory homepage, same fonts and palette as the website. Nothing else until Brooswit asks.
+One static `index.html`: full-width blog image (`assets/blog.jpg`, from `~/Downloads/blog.png`, 1600px JPEG under 500 KB), then "Coming soon" (`h1`, Uncial Antiqua, gold) and one body line (IM Fell English) linking the factory homepage, same fonts and palette as the website. Nothing else until Brooswit asks.
 
 ## Verify after every deploy
 

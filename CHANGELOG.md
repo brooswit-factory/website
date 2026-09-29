@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.9
+
+### Changed
+
+- FACTORY-542: unmistakably dark-fantasy type. Headings use Uncial Antiqua 400 and all body text IM Fell English 400 (SIL OFL, self-hosted latin woff2 in `fonts/` with licenses), replacing Cinzel and EB Garamond (files, `@font-face` and preloads removed). Body is slightly larger and airier (1.4rem, line-height 1.7) for the Fell face. New title line under the header banner: h1 "Brooswit Factory", large, gold, centered, inside `#top` so it hides with the header when a product is selected. The info section headings are now the taglines (drovr "Ever onward...", butchr "It's a message job, but someone's gotta do it...", cleavr "Now you're the butcher..."), with `aria-label` carrying the product name. `docs/site-spec.md` updated.
+
 ## 0.1.8
 
 ### Changed
