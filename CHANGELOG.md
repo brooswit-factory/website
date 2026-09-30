@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.15
+
+### Changed
+
+- FACTORY-549: the cleavr section replaces "Not publicly available yet." with a "cleavr on GitHub" link (https://github.com/brooswit-factory/cleavr) with the cleavr icon (96px PNG8, about 4 KB, shown at 48x48, empty alt), like drovr and butchr. No release or download link yet. Merge only once the repository is public. `docs/site-spec.md` updated.
+
 ## 0.1.14
 
 ### Fixed
