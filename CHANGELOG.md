@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.16
+
+### Added
+
+- FACTORY-554: the cleavr section gets a second link, "Download the latest release", to https://github.com/brooswit-factory/cleavr/releases/latest (always the newest release; the first release is v0.1.4). `docs/site-spec.md` updated.
+
 ## 0.1.15
 
 ### Changed
