@@ -4,7 +4,11 @@
 
 ### Changed
 
-- FACTORY-547: removed the visible "Brooswit Factory" title line under the header banner. The `h1` stays inside `#top` as a screen-reader-only element (1px, clipped) so the page keeps its heading; nothing visible is left in its place and the product logos follow the banner with no gap. `docs/site-spec.md` updated.
+- FACTORY-547: removed the visible "Brooswit Factory" title line under the header banner. The `h1` stays inside `#top` as a screen-reader-only element (1px, clipped) so the page keeps its heading; nothing visible is left in its place and the product logos follow the banner with no gap.
+- FACTORY-548: the gold double border on the left and right of the info area is replaced by a stone-texture image, `assets/border.png` (from `boarder.png`, quantized to PNG8 with alpha, 137 KB to about 11 KB), tiled down each side at up to 53px wide and scaled down on phones (`clamp(24px,6vw,53px)`). The image is not left-right symmetric, so the left edge uses it as is and the right edge is mirrored (`transform:scaleX(-1)`).
+- FACTORY-550: the three product logos stay in one row of three equal columns at every width, including 390px phones (the 600px stacking rule is removed). The selected overlay still covers exactly its logo.
+- FACTORY-551: two more drovr bullets, "Provides more nuanced state management" and "Lizard mode 🦎" (no trailing periods). The body font stack now ends with an emoji fallback (Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji) so the emoji renders; the body face is unchanged.
+- `docs/site-spec.md` updated for all four.
 
 ## 0.1.12
 
