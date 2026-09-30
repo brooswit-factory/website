@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.14
+
+### Fixed
+
+- FACTORY-552: the info-area border is now flush with the page edge. `boarder.png` has near-transparent padding: the art is columns 12..41 of 53, so the border sat about 12px in from the edge. `assets/border.png` is now the crop `30x1402+12+0`, and `--edge` is `clamp(14px,3.4vw,30px)` (30px at full size, scaled down on phones). The right side is still mirrored (`scaleX(-1)`). The image is quantized with a full alpha table (about 25 KB) instead of the 1-bit transparency of the previous PNG8, which had flattened the soft edges. `docs/site-spec.md` updated.
+
 ## 0.1.13
 
 ### Changed
